@@ -1,0 +1,32 @@
+<body>
+    <h1>数字货币市场</h1>
+    <br>
+    <h2>Gateio</h2>
+    <p>gateio数字货币交易所</p>
+    <br>
+    <button id="gateAPI" onclick="gateApiInput()" data-loading-text="•••">gateio API KEY 输入</button>
+    <br>
+    <button id="gateSecret" onclick="gateSecretInput()" data-loading-text="•••">gateio SECRET KEY 输入</button>
+    <br>
+    <button id="gateBalance" onclick="gateBalance()" data-loading-text="•••">获取gate账户余额</button>
+    <br>
+    <button id="gateOrder" onclick="gateOrder()" data-loading-text="•••">下单</button><br>
+    示例:btc_usdt:9500:1(品种:美元价格:数量)
+
+    <script>
+      // 向插件进行通信，让插件弹出输入框，用户在输入框内输入其api key
+      var vscode = acquireVsCodeApi()
+      function gateApiInput(){
+        vscode.postMessage({text: "gateAPI"});
+      }
+      function gateSecretInput(){
+        vscode.postMessage({text:"gateSecret"})
+      }
+      function gateBalance(){
+        vscode.postMessage({text:"gateBalance"})
+      }
+      function gateOrder(){
+        vscode.postMessage({text:"gateOrder"})
+      }
+    </script>
+</body>

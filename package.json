@@ -1,0 +1,92 @@
+{
+	"name": "hasaki-quant",
+	"displayName": "hasaki-quant",
+	"description": "hasaki quant plugin",
+	"version": "0.0.6",
+	"publisher": "hasaki-quant",
+	"keywords": ["vscode","plugin","quant","hasaki"],
+	"icon": "images/hasaki.jpg",
+	"engines": {
+		"vscode": "^1.41.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:extension.hasaki",
+		"onCommand:extension.requestQuote",
+		"onCommand:extension.test",
+		"onCommand:click",
+		"onView:SW1",
+		"onView:SW2",
+		"onView:SW3",
+		"onView:SW4"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.hasaki",
+				"title": "hasaki"
+			},
+			{
+				"command": "extension.requestQuote",
+				"title":"quote"
+			},
+			{
+				"command": "extension.test",
+				"title": "test"
+			}
+		],
+		"menus": {
+			
+		},
+		"viewsContainers": {
+			"activitybar": [
+				{
+					"id": "strategyWriter",
+					"title": "HasakiQuant",
+					"icon": "images/handsome.svg"
+				}
+			]
+		},
+		"views":{
+			"strategyWriter":[
+				{
+					"id":"SW1",
+					"name":"策略信息"
+				},
+				{
+					"id":"SW2",
+					"name":"账户信息"
+				},
+				{
+					"id":"SW3",
+					"name":"市场"
+				},
+				{
+					"id":"SW4",
+					"name":"Hasaki-Quant社区"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^5.2.7",
+		"@types/node": "^12.11.7",
+		"@types/vscode": "^1.41.0",
+		"glob": "^7.1.5",
+		"mocha": "^6.2.2",
+		"typescript": "^3.6.4",
+		"tslint": "^5.20.0",
+		"vscode-test": "^1.2.2"
+	}
+}

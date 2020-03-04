@@ -1,0 +1,30 @@
+<body>
+    <h1>账户信息</h1>
+
+    <h2>个人交易日志</h2>
+    <p>在hasaki-quant中策略的下单和手动下单交易的结果都会记录在日志中</p>
+    <p>要使用本地交易日志的功能，用户需要在已经初始化过的工程目录，交易日志会保存在工程目录的userLog目录中</p>
+    <p>保存到日志的交易数据包括，成交时间，成交价格，成交量，盈亏，下单理由</p>
+    <!--用户可能是直接在交易所下单，那么用户就不知道其准确的下单时间，产品设计中，添加一个生成当前时间的按钮
+    用户直接用当前的时间作为下单时间-->
+    <br>
+    <from>
+        <p>记录您的交易</p>
+        <p>如果忘记您的交易时间，可以点击生成时间，以当前的时间作为您上次的交易时间</p>
+        <input name="tradeTime" type="text" placeholder="成交时间" style="width:200px; height:20px;" />
+        <br>
+        <input name="tradePrice" type="text" placeholder="成交价格" style="width:200px; height:20px;">
+        <br>
+        <input name="tradeVolume" type="text" placeholder="成交量" style="width:200px; height:20px;">
+        <br>
+        <input name="orderReason" type="text" placeholder="下单理由" style="width:200px; height:20px;">
+    </from>
+    
+    <script>
+        var vscode = acquireVsCodeApi()
+        function example(){
+            vscode.postMessage({text: "example"});
+        }
+    </script>
+
+</body>
