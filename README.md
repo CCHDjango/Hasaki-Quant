@@ -44,7 +44,7 @@ vnpy进行设计的，vnpy策略的写法是可以直接用在hasaki-quant上。
 
 #### hasaki数据中台
 
-[hasaki数据中台源码地址]()
+[hasaki数据中台源码地址](https://github.com/CCHDjango/hasakiServer)
 
 #### Roadmap
 
