@@ -138,6 +138,9 @@ export function gateioWebView(context:ExtensionContext,viewColumn:ViewColumn,lab
             case "gateOrder":
                 vscodeInput("gateOrder","please input order like: BTC_USDT:9500:1 (品种:当前美元价格:-数量 数量前加-为卖出，不加-为买进)")
                 break
+            case "gateWithdraw":
+                vscodeInput("gateWithdraw","input Your address")
+                break
         }
     }, undefined, context.subscriptions)
     return webViewPanel

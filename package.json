@@ -2,7 +2,7 @@
 	"name": "hasaki-quant",
 	"displayName": "hasaki-quant",
 	"description": "hasaki quant plugin",
-	"version": "0.0.6",
+	"version": "0.0.7",
 	"publisher": "hasaki-quant",
 	"keywords": ["vscode","plugin","quant","hasaki"],
 	"icon": "images/hasaki.jpg",
@@ -81,7 +81,7 @@
 	"devDependencies": {
 		"@types/glob": "^7.1.1",
 		"@types/mocha": "^5.2.7",
-		"@types/node": "^12.11.7",
+		"@types/node": "^12.18.2",
 		"@types/vscode": "^1.41.0",
 		"glob": "^7.1.5",
 		"mocha": "^6.2.2",

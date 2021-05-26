@@ -12,6 +12,10 @@
     <br>
     <button id="gateOrder" onclick="gateOrder()" data-loading-text="•••">下单</button><br>
     示例:btc_usdt:9500:1(品种:美元价格:数量)
+    <br>
+    <button id="gateWithdraw" onclick="gateWithdraw()" data-loading-text="•••">体现到数字货币钱包中</button><br>
+    usdt example: usdt:10:15ZzJcpY1UxDorf9SLH459AapeXHqp8ikB
+
 
     <script>
       // 向插件进行通信，让插件弹出输入框，用户在输入框内输入其api key
@@ -27,6 +31,9 @@
       }
       function gateOrder(){
         vscode.postMessage({text:"gateOrder"})
+      }
+      function gateWithdraw(){
+        vscode.postMessage({text:"gateWithdraw"})
       }
     </script>
 </body>

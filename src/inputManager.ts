@@ -41,7 +41,9 @@ export function vscodeInput(module:string,tip:string,otherParam?:string){
                     break
                 case "AStockAPI":
                     break
-
+                case "gateWithdraw":
+                    gateWithdraw(value)
+                    break
             }
         }
     })
@@ -92,6 +94,21 @@ function sendOrder(order:string):void{
             log.print("sell order return : "+res.message)
         })
     }
+}
+
+function gateWithdraw(address:string):void{
+    // function : withdraw
+    let current:string=address.split(":")[0]
+    let volume:string=address.split(":")[1]
+    let realAddress:string=address.split(":")[2]
+    let tampJson=readJson(root_path+"/config.json").gate
+    let api:string=tampJson.api
+    let secret:string=tampJson.secret
+    gate.gateKEY=api
+    gate.gateSECRET=secret
+    gate.withdraw(current,volume,realAddress,function(res:any){
+        log.print("withdraw return : "+res.message)
+    })
 }
 
 /*--------------------------火币相关的方法-------------------------*/
